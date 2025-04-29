@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFingersSampleCS", "SimpleFingersSampleCS.csproj", "{5A39968F-FB2A-44E3-BA5F-34C8C9A0BBC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win64_x64 = Debug|Win64_x64
+		Release|Win64_x64 = Release|Win64_x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A39968F-FB2A-44E3-BA5F-34C8C9A0BBC9}.Debug|Win64_x64.ActiveCfg = Debug|x64
+		{5A39968F-FB2A-44E3-BA5F-34C8C9A0BBC9}.Debug|Win64_x64.Build.0 = Debug|x64
+		{5A39968F-FB2A-44E3-BA5F-34C8C9A0BBC9}.Release|Win64_x64.ActiveCfg = Release|x64
+		{5A39968F-FB2A-44E3-BA5F-34C8C9A0BBC9}.Release|Win64_x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A39968F-FB2A-44E3-BA5F-34C8C9A0BBC9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <StartupObject>Neurotec.Samples.Program</StartupObject>
+    <RootNamespace>Neurotec.Samples</RootNamespace>
+    <AssemblyName>SimpleFingersSampleCS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>..\..\..\..\Resources\Neurotechnology.ico</ApplicationIcon>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Bin\Win64_x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Bin\Win64_x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Neurotec, Version=2025.1.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics, Version=2025.1.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Client, Version=2025.1.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Gui, Version=2025.1.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Biometrics.Gui.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Devices, Version=2025.1.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Devices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Gui, Version=2025.1.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Gui.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Licensing, Version=2025.1.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Licensing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Neurotec.Media, Version=2025.1.0.0, Culture=neutral, PublicKeyToken=ea4ecf06177ea613, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Bin\dotNET\Neurotec.Media.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EnrollFromImage.resx">
+      <DependentUpon>EnrollFromImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollFromScanner.resx">
+      <DependentUpon>EnrollFromScanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IdentifyFinger.resx">
+      <DependentUpon>IdentifyFinger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicensePanel.resx">
+      <DependentUpon>LicensePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SegmentFingerprints.resx">
+      <DependentUpon>SegmentFingerprints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifyFinger.resx">
+      <DependentUpon>VerifyFinger.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Common\CS\Utils.cs">
+      <Link>Utils.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EnrollFromImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollFromImage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EnrollFromImage.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EnrollFromScanner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnrollFromScanner.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EnrollFromScanner.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FaceRecognition.cs" />
+    <Compile Include="IdentifyFinger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IdentifyFinger.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IdentifyFinger.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LicensePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LicensePanel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LicensePanel.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SegmentFingerprints.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SegmentFingerprints.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SegmentFingerprints.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="VerifyFinger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VerifyFinger.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>VerifyFinger.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="WebSocketServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Fleck" Version="1.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
